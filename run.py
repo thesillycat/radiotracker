@@ -30,7 +30,7 @@ def log_error(message):
 
 
 def print_intro():
-    banner = f"""{Fore.MAGENTA}{Style.BRIGHT}
+    banner = rf"""{Fore.MAGENTA}{Style.BRIGHT}
   ____           _ _       _____               _
  |  _ \ __ _  __| (_) ___ |_   _| __ __ _  ___| | _____ _ __
  | |_) / _` |/ _` | |/ _ \  | || '__/ _` |/ __| |/ / _ \ '__|

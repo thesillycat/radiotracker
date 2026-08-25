@@ -20,3 +20,7 @@ def checkVersion():
     if repoVersion != getCurrentVersion():
         print(f"{Fore.YELLOW}Update available: {repoVersion} (current: {getCurrentVersion()}){Style.RESET_ALL}")
         print(f"{Fore.WHITE}Run: git pull or reclone the repository to update.{Style.RESET_ALL}")
+    elif repoVersion == getCurrentVersion():
+        print(f"{Fore.GREEN}You are running the latest version: {getCurrentVersion()}{Style.RESET_ALL}")
+    else:
+        print(f"{Fore.RED}Error checking for updates. Please check your internet connection.{Style.RESET_ALL}")
