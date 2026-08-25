@@ -5,5 +5,7 @@ GET STARTED!
 
 Make sure to configure your install at config.json
 
-```pip install -r requirements.txt
-python3 run.py```
+```
+git clone https://github.com/thesillycat/radiotracker
+pip install -r requirements.txt
+python3 run.py
