@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RadioTracker Viewer</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 2.5rem;
+            background: #f7f7f8;
+            color: #1a1a1a;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 0 1.25rem;
+        }
+
+        nav {
+            margin-bottom: 1.5rem;
+        }
+
+        nav a {
+            margin-right: 1.5rem;
+            text-decoration: none;
+            color: #666;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover {
+            color: #1a1a1a;
+        }
+
+        nav a.active {
+            color: #1a1a1a;
+            border-bottom-color: #1a1a1a;
+        }
+
+        form {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-right: 0.5rem;
+        }
+
+        select {
+            padding: 0.4rem 0.6rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: #fff;
+            font-size: 0.9rem;
+            color: #1a1a1a;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 10px 14px;
+            border-bottom: 1px solid #eee;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background: #fafafa;
+            color: #888;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: #fafafa;
+        }
+
+        img {
+            height: 40px;
+            width: 40px;
+            object-fit: cover;
+            border-radius: 4px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>RadioTracker</h1>
+
+    <nav>
+        <a href="/" class="active">Recent Plays</a>
+        <a href="/library">Library</a>
+    </nav>
+
+    <form method="get">
+        <label for="station">Station:</label>
+        <select name="station" onchange="this.form.submit()">
+            <option value="">-- All Stations --</option>
+            {% for s in stations %}
+                <option value="{{ s }}" {% if s == selectedStation %}selected{% endif %}>{{ s }}</option>
+            {% endfor %}
+        </select>
+    </form>
+
+    <table>
+        <tr>
+            <th>Cover</th>
+            <th>Station</th>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>Album</th>
+            <th>Played At</th>
+        </tr>
+        {% for r in records %}
+        <tr>
+            <td>{% if r['image_url'] %}<img src="{{ r['image_url'] }}">{% endif %}</td>
+            <td>{{ r['station_name'] }}</td>
+            <td>{{ r['title'] }}</td>
+            <td>{{ r['artist'] }}</td>
+            <td>{{ r['album'] }}</td>
+            <td>{{ r['played_at'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+    "COMMENT": "Fetch interval is in seconds.",
+    "fetchInterval": "60",
+    "host": "localhost",
+    "port": "5000"
+}

@@ -1,0 +1,9 @@
+{
+    "azuracastTestRadio": {
+        "name": "Azuracast Test Radio",
+        "url": "https://azuracast.com/",
+        "stream": "https://demo.azuracast.com/listen/azuratest_radio/radio.mp3",
+        "type": "azuracast",
+        "nowPlayingEndpoint": "https://demo.azuracast.com/api/nowplaying/1"
+    }
+}

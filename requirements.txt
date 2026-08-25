@@ -1,0 +1,10 @@
+colorama
+requests
+json
+time
+threading
+datetime
+flask
+sqlite3
+os
+typing
