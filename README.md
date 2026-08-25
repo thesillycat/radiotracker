@@ -7,4 +7,4 @@ Make sure to configure your install at config.json
 
 ```
 pip install -r requirements.txt
-python3 run.py```
+python3 run.py
