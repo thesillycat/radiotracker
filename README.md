@@ -5,5 +5,6 @@ GET STARTED!
 
 Make sure to configure your install at config.json
 
-```pip install -r requirements.txt
+```
+pip install -r requirements.txt
 python3 run.py```
