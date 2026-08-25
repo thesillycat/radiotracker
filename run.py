@@ -1,6 +1,7 @@
 from functions.grabRadioNowPlaying import grabRadioNowPlaying
 from functions.sendToDatabase import DEFAULT_DB_PATH, sendToDatabase
 from functions.addMissingData import addMissingData
+from other.checkForUpdates import *
 from viewer import app as viewer_app
 from datetime import datetime, timezone
 from colorama import init, Fore, Style
@@ -9,6 +10,7 @@ import time
 import threading
 
 init(autoreset=True)
+checkVersion()
 
 
 def log_info(message):
