@@ -1,6 +1,9 @@
 # radiotracker
 Radio station tracker that collects nowplaying data and builds a database of it
 
+![recentsongs](githubimgs/1.png)
+![library](githubimgs/2library.png)
+
 GET STARTED!
 
 Make sure to configure your install at config.json

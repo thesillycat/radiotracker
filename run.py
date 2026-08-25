@@ -8,9 +8,15 @@ from colorama import init, Fore, Style
 import json
 import time
 import threading
+import shutil
 
 init(autoreset=True)
 checkVersion()
+
+# clear up images that are only used in the github readme.
+if os.path.exists("githubimgs"):
+    shutil.rmtree("githubimgs")
+
 
 
 def log_info(message):
